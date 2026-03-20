@@ -1,0 +1,22 @@
+{
+  "name": "Wakaama LwM2M Server",
+  "version": "0.1.0",
+  "slug": "wakaama_lwm2m_server",
+  "description": "Run the EdgeZ Wakaama LwM2M server inside Home Assistant Add-ons.",
+  "startup": "services",
+  "boot": "auto",
+  "init": false,
+  "arch": [
+    "aarch64"
+  ],
+  "ports": {
+    "5683/udp": 5683,
+    "8088/tcp": 8088
+  },
+  "options": {
+    "args": "-4"
+  },
+  "schema": {
+    "args": "str?"
+  }
+}
