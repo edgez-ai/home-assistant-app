@@ -7,6 +7,7 @@ RUN apt-get update \
         ca-certificates \
         jq \
         libmicrohttpd12 \
+        libmosquitto1 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /opt/addon
