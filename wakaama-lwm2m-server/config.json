@@ -1,6 +1,6 @@
 {
   "name": "Wakaama LwM2M Server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "slug": "wakaama_lwm2m_server",
   "description": "Run the EdgeZ Wakaama LwM2M server inside Home Assistant Add-ons.",
   "startup": "services",
