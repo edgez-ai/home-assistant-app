@@ -30,9 +30,16 @@ RUN set -eu; \
             echo "Using fallback binary: /opt/addon/lwm2mserver"; \
         fi; \
         cp /opt/addon/run.sh /run.sh; \
+        mkdir -p /usr/lib/lua/luci/edgez/sensors; \
+        if [ -d /opt/addon/sensors ]; then \
+            cp -a /opt/addon/sensors/. /usr/lib/lua/luci/edgez/sensors/; \
+        fi; \
         chmod +x /usr/local/bin/lwm2mserver /run.sh
 
 EXPOSE 5683/udp
 EXPOSE 8088/tcp
+
+ENV EDGEZ_CONFIG_FILE=/data/edgez/uci_fallback.conf
+VOLUME ["/data"]
 
 ENTRYPOINT ["/run.sh"]
