@@ -15,8 +15,8 @@
     "8088/tcp": 8088
   },
   "options": {
-    "mqtt_url": "",
-    "mqtt_username": "",
+    "mqtt_url": "mqtt://core-mosquitto:1883",
+    "mqtt_username": "edgez",
     "mqtt_password": ""
   },
   "schema": {

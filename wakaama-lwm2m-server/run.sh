@@ -1,9 +1,24 @@
 #!/usr/bin/env sh
 set -eu
 
-MQTT_URL="${MQTT_URL:-}"
-MQTT_USERNAME="${MQTT_USERNAME:-}"
-MQTT_PASSWORD="${MQTT_PASSWORD:-}"
+OPTIONS_FILE="/data/options.json"
+ENV_MQTT_URL="${MQTT_URL:-}"
+ENV_MQTT_USERNAME="${MQTT_USERNAME:-}"
+ENV_MQTT_PASSWORD="${MQTT_PASSWORD:-}"
+
+MQTT_URL="${ENV_MQTT_URL}"
+MQTT_USERNAME="${ENV_MQTT_USERNAME}"
+MQTT_PASSWORD="${ENV_MQTT_PASSWORD}"
+
+if [ -f "${OPTIONS_FILE}" ] && command -v jq >/dev/null 2>&1; then
+	file_mqtt_url="$(jq -r '.mqtt_url // ""' "${OPTIONS_FILE}" 2>/dev/null || true)"
+	file_mqtt_username="$(jq -r '.mqtt_username // ""' "${OPTIONS_FILE}" 2>/dev/null || true)"
+	file_mqtt_password="$(jq -r '.mqtt_password // ""' "${OPTIONS_FILE}" 2>/dev/null || true)"
+
+	[ -n "${file_mqtt_url}" ] && MQTT_URL="${file_mqtt_url}"
+	[ -n "${file_mqtt_username}" ] && MQTT_USERNAME="${file_mqtt_username}"
+	[ -n "${file_mqtt_password}" ] && MQTT_PASSWORD="${file_mqtt_password}"
+fi
 
 set -- /usr/local/bin/lwm2mserver
 
