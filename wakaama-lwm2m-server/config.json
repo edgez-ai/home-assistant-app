@@ -7,16 +7,21 @@
   "boot": "auto",
   "init": false,
   "arch": [
-    "aarch64"
+    "aarch64",
+    "amd64"
   ],
   "ports": {
     "5683/udp": 5683,
     "8088/tcp": 8088
   },
   "options": {
-    "args": "-4"
+    "mqtt_url": "",
+    "mqtt_username": "",
+    "mqtt_password": ""
   },
   "schema": {
-    "args": "str?"
+    "mqtt_url": "str?",
+    "mqtt_username": "str?",
+    "mqtt_password": "password?"
   }
 }
