@@ -18,11 +18,15 @@
   "options": {
     "mqtt_url": "mqtt://core-mosquitto:1883",
     "mqtt_username": "edgez",
-    "mqtt_password": ""
+    "mqtt_password": "",
+    "cloud_serial": "",
+    "cloud_join_key": ""
   },
   "schema": {
     "mqtt_url": "str?",
     "mqtt_username": "str?",
-    "mqtt_password": "password?"
+    "mqtt_password": "password?",
+    "cloud_serial": "str?",
+    "cloud_join_key": "password?"
   }
 }
