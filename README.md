@@ -33,8 +33,8 @@ This add-on works with **ESP32S3 series** edge devices. A notable device is the 
 
 To use Wi-Fi HaLow, a compatible **Wi-Fi HaLow access point** is required. Tested options include:
 
-- [Halowlink2](https://www.halowlink.com)
-- [Heltec HT-H7608](https://heltec.org)
+- [Halowlink2](https://www.morsemicro.com/halowlink/)
+- [Heltec HT-H7608](https://heltec.org/project/ht-h7608/)
 
 Device firmware can be found at: [https://github.com/edgez-ai/edge-device-esp32](https://github.com/edgez-ai/edge-device-esp32)
 
