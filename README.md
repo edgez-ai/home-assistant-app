@@ -27,7 +27,7 @@ Home Assistant add-on repository for EdgeZ services.
 
 ## Supported Devices
 
-This add-on works with **ESP32S3 series** edge devices. A notable device is the **Heltec HT-HC33**, which supports **Wi-Fi HaLow (802.11ah)** and can extend Home Assistant connectivity to **up to 1 km**.
+This add-on works with **ESP32S3 series** edge devices. A notable device is the [**Heltec HT-HC33**](https://heltec.org/project/ht-hc33/), which supports **Wi-Fi HaLow (802.11ah)** and can extend Home Assistant connectivity to **up to 1 km**.
 
 ### Wi-Fi HaLow Setup
 
