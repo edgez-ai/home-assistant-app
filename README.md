@@ -4,6 +4,9 @@ Home Assistant add-on repository for EdgeZ services.
 
 ## Screenshots
 
+### Setup
+![Setup](assets/setup.jpg)
+
 ### Configuration
 ![Configuration](assets/config.png)
 
